@@ -310,6 +310,42 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-Bold.eot");
+  src: url("../webfonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-Bold.woff2") format("woff2"), url("../webfonts/Lato-Bold.woff") format("woff"), url("../webfonts/Lato-Bold.ttf") format("truetype"), url("../webfonts/Lato-Bold.svg#Lato-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-LightItalic.eot");
+  src: url("../webfonts/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-LightItalic.woff2") format("woff2"), url("../webfonts/Lato-LightItalic.woff") format("woff"), url("../webfonts/Lato-LightItalic.ttf") format("truetype"), url("../webfonts/Lato-LightItalic.svg#Lato-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-Regular.eot");
+  src: url("../webfonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-Regular.woff2") format("woff2"), url("../webfonts/Lato-Regular.woff") format("woff"), url("../webfonts/Lato-Regular.ttf") format("truetype"), url("../webfonts/Lato-Regular.svg#Lato-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-Italic.eot");
+  src: url("../webfonts/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-Italic.woff2") format("woff2"), url("../webfonts/Lato-Italic.woff") format("woff"), url("../webfonts/Lato-Italic.ttf") format("truetype"), url("../webfonts/Lato-Italic.svg#Lato-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-Black.eot");
+  src: url("../webfonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-Black.woff2") format("woff2"), url("../webfonts/Lato-Black.woff") format("woff"), url("../webfonts/Lato-Black.ttf") format("truetype"), url("../webfonts/Lato-Black.svg#Lato-Black") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'Lato';
+  src: url("../webfonts/Lato-Light.eot");
+  src: url("../webfonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../webfonts/Lato-Light.woff2") format("woff2"), url("../webfonts/Lato-Light.woff") format("woff"), url("../webfonts/Lato-Light.ttf") format("truetype"), url("../webfonts/Lato-Light.svg#Lato-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -8282,5 +8318,326 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 1;
   height: 100%;
   width: 100%; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #000;
+  background: #ffffff; }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    color: unset;
+    text-decoration: unset; }
+
+ul {
+  list-style-type: none; }
+
+p {
+  margin: 0; }
+
+.title {
+  text-align: left;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  font-size: 62px;
+  line-height: 62px;
+  letter-spacing: 2.73px;
+  color: #DC2F27;
+  text-transform: uppercase;
+  opacity: 1; }
+
+.container {
+  max-width: 1010px; }
+
+.banner {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-position: top center;
+  z-index: 1; }
+  .banner:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1; }
+  .banner .container {
+    max-width: 1245px; }
+
+.banner__content {
+  margin-top: 150px;
+  align-items: flex-end; }
+
+.banner__sub__title {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 36px;
+  font-size: 30px;
+  letter-spacing: 1.92px;
+  color: #FFFFFF;
+  max-width: 394px;
+  margin-bottom: 20px; }
+
+.banner__title {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 82px;
+  font-size: 80px;
+  letter-spacing: 2.62px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  max-width: 818px;
+  margin-bottom: 40px; }
+
+.banner__apply {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 24px;
+  font-size: 24px;
+  letter-spacing: 12px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.6s; }
+  .banner__apply:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: all 0.8s; }
+  .banner__apply:hover {
+    color: #DC2D27; }
+    .banner__apply:hover:after {
+      left: calc(100% - 32px);
+      background: #DC2D27; }
+
+.banner__nav__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+  .banner__nav__block .banner__nav__list {
+    display: flex;
+    flex-direction: column;
+    height: 47px;
+    align-items: flex-end;
+    justify-content: flex-end; }
+    .banner__nav__block .banner__nav__list:last-child .banner__nav__link {
+      font-weight: 900; }
+      .banner__nav__block .banner__nav__list:last-child .banner__nav__link:after {
+        background: #ffffff; }
+      .banner__nav__block .banner__nav__list:last-child .banner__nav__link:hover {
+        color: #DC2D27;
+        transform: translate(0) scale(1); }
+        .banner__nav__block .banner__nav__list:last-child .banner__nav__link:hover:after {
+          left: calc(100% - 23px);
+          background: #DC2D27; }
+
+.banner__nav__link {
+  text-align: right;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 14px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.6s;
+  padding: 5px 0 5px 5px; }
+  .banner__nav__link:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: transparent;
+    left: calc(100% - 20px);
+    bottom: 0;
+    transition: all 0.8s; }
+  .banner__nav__link:hover {
+    color: #DC2D27;
+    transform: translate(-20px);
+    font-weight: 900;
+    letter-spacing: 3px; }
+    .banner__nav__link:hover:after {
+      left: calc(100% - 23px);
+      background: #DC2D27; }
+
+.about {
+  padding: 230px 0 250px; }
+  .about__img {
+    width: 440px;
+    height: 440px;
+    object-fit: cover; }
+  .about__desc {
+    text-align: left;
+    letter-spacing: 0.58px;
+    color: #000000;
+    opacity: 1;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    margin-top: 55px; }
+
+.agenda {
+  padding: 240px 0; }
+
+.agenda__cont {
+  display: flex;
+  width: 100%;
+  max-width: 1366px;
+  margin: 75px auto 0; }
+  .agenda__cont .owl-item:nth-child(even) {
+    margin-top: 20px !important; }
+
+.agenda__item {
+  min-width: 313px !important;
+  max-width: 313px !important;
+  height: 465px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #707070;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 40px;
+  margin-right: 25px; }
+
+.agenda__day__big {
+  text-align: left;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.68px;
+  color: #DC2F27;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 20px; }
+
+.agenda__day__small {
+  text-align: left;
+  letter-spacing: 2.24px;
+  color: #DC2F27;
+  opacity: 1;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  font-style: italic; }
+
+.agenda__item__title {
+  text-align: left;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.68px;
+  color: #000000;
+  opacity: 1;
+  margin-top: 30px;
+  height: 130px; }
+
+.agenda__speakers__title {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 1.44px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-top: 45px;
+  margin-bottom: 15px; }
+
+.agenda__speakers__row {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 5px; }
+
+.agenda__speakers__avatar {
+  width: 30px !important;
+  height: 30px !important;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px; }
+
+.agenda__speakers__name {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  letter-spacing: 0.58px;
+  color: #000000;
+  opacity: 1;
+  margin: 0; }
+
+.agenda__link {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 14px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.6s;
+  margin-top: 40px;
+  max-width: max-content; }
+  .agenda__link:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: all 0.8s; }
+  .agenda__link:hover {
+    color: #DC2D27; }
+    .agenda__link:hover:after {
+      left: calc(100% - 24px);
+      background: #DC2D27; }
 
 /*# sourceMappingURL=style.css.map */
