@@ -8319,9 +8319,6 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100%;
   width: 100%; }
 
-html {
-  scroll-behavior: smooth; }
-
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
