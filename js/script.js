@@ -9,12 +9,14 @@ $(document).ready(function () {
         loop: true,
         margin: 25,
         nav: false,
-        slideSpeed: 300,
-        paginationSpeed: 500,
+        slideSpeed: 1000,
+        paginationSpeed: 1000,
         singleItem: true,
         navigation: true,
         stagePadding: 20,
         scrollPerPage: true,
+        startPosition:300,
+        autoplay:true,
         responsive: {
             0: {
                 items: 1
