@@ -1,12 +1,9 @@
 $(document).ready(function () {
-    function scrollToAnchor(aid) {
-        var aTag = $("a[name='" + aid + "']");
-        $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
-    }
-
-    $(".banner__nav__link, .header__link").click(function () {
-        scrollToAnchor('id3');
+    $( ".banner__nav__link, .header__link" ).click(function( event ) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
     });
+
     // var owl = $('.owl-carousel');
     $('.agenda__cont').owlCarousel({
         loop: true,
