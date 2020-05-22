@@ -8597,7 +8597,8 @@ p {
     margin-top: 55px; }
 
 .agenda {
-  padding: 240px 0; }
+  padding: 240px 0;
+  background: #F1F1F1; }
 
 .agenda__cont {
   display: flex;
@@ -8789,7 +8790,8 @@ p {
 
 .participants {
   padding-top: 240px;
-  padding-bottom: 240px; }
+  padding-bottom: 240px;
+  background: #f1f1f1; }
 
 .participants__title {
   margin-bottom: 60px; }
@@ -8879,7 +8881,8 @@ p {
 
 .contact {
   padding-top: 185px;
-  padding-bottom: 180px; }
+  padding-bottom: 180px;
+  background: #f8f8f8; }
 
 .contact__title {
   margin-bottom: 35px; }
@@ -8961,7 +8964,8 @@ p {
   opacity: 1; }
 
 .sign__up__wrapper {
-  padding-left: 555px; }
+  padding-left: 555px;
+  position: relative; }
 
 .sign__up__left {
   width: 455px;
@@ -9012,7 +9016,8 @@ p {
       justify-content: center; }
 
 .sign__up__right {
-  padding-top: 240px; }
+  padding-top: 240px;
+  padding-bottom: 245px; }
 
 .sign__up__right__title {
   max-width: 650px;
@@ -9050,6 +9055,10 @@ p {
   width: 100%;
   height: 35px;
   margin-bottom: 10px; }
+  .sign__up__row.sign__up__row__textarea {
+    height: 305px; }
+    .sign__up__row.sign__up__row__textarea textarea {
+      white-space: normal; }
   .sign__up__row .sign__up__input {
     text-align: left;
     font-family: "Lato", sans-serif;
@@ -9090,6 +9099,170 @@ p {
   width: 100%;
   height: 395px;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background: #f1f1f1; }
+
+.upload__video__block {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1; }
+
+.upload__logo {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 14px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #000;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.6s;
+  background-color: transparent;
+  border: 0;
+  margin-top: 10px; }
+  .upload__logo:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #000;
+    left: 0;
+    bottom: 0;
+    transition: all 0.8s; }
+  .upload__logo:hover {
+    color: #DC2D27; }
+    .upload__logo:hover:after {
+      left: calc(100% - 24px);
+      background: #DC2D27; }
+
+.sign__up__desc {
+  text-align: left;
+  padding-left: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.46px;
+  color: #000000;
+  opacity: 1;
+  margin-top: 15px;
+  margin-bottom: 25px; }
+
+.sign__up__submit {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 24px;
+  font-size: 24px;
+  letter-spacing: 12px;
+  color: #DC2D27;
+  text-transform: uppercase;
+  opacity: 1;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.6s;
+  margin-top: 85px;
+  background-color: transparent;
+  border: 0; }
+  .sign__up__submit:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #DC2D27;
+    left: 0;
+    bottom: 0;
+    transition: all 0.8s; }
+  .sign__up__submit:hover {
+    color: #000; }
+    .sign__up__submit:hover:after {
+      left: calc(100% - 32px);
+      background: #000; }
+
+.sign__home {
+  text-align: right;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 14px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #000;
+  text-transform: uppercase;
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.6s;
+  padding: 5px 0 5px 5px;
+  white-space: nowrap;
+  width: max-content;
+  position: absolute;
+  top: 40px;
+  right: 60px; }
+  .sign__home:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: transparent;
+    left: calc(100% - 20px);
+    bottom: 0;
+    transition: all 0.8s; }
+  .sign__home:hover {
+    color: #DC2D27;
+    transform: translate(-20px) scale(1.1); }
+    .sign__home:hover:after {
+      left: calc(100% - 20px);
+      background: #DC2D27; }
+
+.thank__desc {
+  max-width: 360px;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.58px;
+  color: #000000;
+  opacity: 1;
+  margin-top: 40px;
+  margin-bottom: 60px; }
+
+.sign__in__bottom__row {
+  display: flex;
+  flex-direction: column; }
+
+.sign__in__bottom {
+  margin-top: 95px;
+  display: flex;
+  justify-content: space-between;
+  width: 395px; }
+
+.sign__in__bottom__title {
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.46px;
+  color: #000000;
+  opacity: 1;
+  margin-top: -10px; }
+
+.sign__up__bottom__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
 
 /*# sourceMappingURL=style.css.map */
