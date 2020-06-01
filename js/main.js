@@ -408,7 +408,7 @@ $("#admin_logo_upload").on("click", function (e) {
             if (php_script_response && typeof JSON.parse(php_script_response) === "string") {
                 $("#learning_icon").attr("src", JSON.parse(php_script_response)).addClass("upload__logo__img")
             }
-            admin_logo_upload = true;
+            is_img_uploaded = true;
         }
     });
 })
@@ -435,14 +435,13 @@ $("#learnign_save").on("click", function () {
             learning_link: $("#learning_link").val(),
             selected_id: $("#exampleFormControlSelect1").val(),
             learning_id: edit_learn_id,
-            img_status: admin_logo_upload
+            img_status: is_img_uploaded
         }
         $.ajax({
             method: "Post",
             url: base_url + "php/login.php",
             data: {action: "edit_learning", data: learning_data},
             success: function (data) {
-
             }
         })
     }

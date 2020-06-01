@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
     <div class="sign__up__wrapper">
-        <a href="../../index.php" class="sign__home ">Home</a>
+        <a href="../../index.php" class="sign__home">Home</a>
         <div class="sign__up__left" style="background-image: url(../../img/bg/sign_in.png);">
             <h4 class="sign__up__left__title">APPLY</h4>
             <footer class="footer">

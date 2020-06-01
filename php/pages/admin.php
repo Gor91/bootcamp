@@ -110,7 +110,7 @@ if (!empty($_SESSION)) {
 
             </div>
             <div class="sign__up__right sign__up__right_admin">
-                <form action="#" class="sign__up__form" id="edit_learnings" style="opacity: 0">
+                <form class="sign__up__form" id="edit_learnings" style="opacity: 0">
                     <div class="sign__up__block">
                         <div class="sign__up__block__title">Learning Part</div>
                         <div class="sign__up__block__cont">
@@ -132,7 +132,7 @@ if (!empty($_SESSION)) {
                                 <label for="learning_name" class="sign__up__label">Learning name</label>
                             </div>
                             <div class="sign__up__row">
-                                <input type="text" name="company_name" class="sign__up__input" id="learning_link">
+                                <input type="url" name="company_name" class="sign__up__input" id="learning_link">
                                 <label for="learning_link" class="sign__up__label">Link</label>
                             </div>
                             <div class="upload__logo__block">
@@ -157,6 +157,7 @@ if (!empty($_SESSION)) {
                         </div>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
