@@ -8,10 +8,10 @@ $href = "";
 $link_name = "";
 $apply = false;
 if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
-    $href = $const . "php/pages/profile.php";
+    $href = $const["root_path"] . "php/pages/profile.php";
     $link_name = "MY PROFILE";
 } else {
-    $href = $const . "php/pages/sign__in.php";
+    $href = $const["root_path"] . "php/pages/sign__in.php";
     $apply = true;
     $link_name = "SIGN IN";
 }

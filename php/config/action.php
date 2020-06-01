@@ -1,12 +1,13 @@
 <?php
 include "const.php";
 
-
 class Db
 {
-
     private $conn;
 
+    /**
+     * Db constructor.
+     */
     public function __construct()
     {
         $servername = "localhost";
@@ -22,6 +23,10 @@ class Db
         $this->conn->query($query);
     }
 
+    /**
+     * @param $id
+     * @return array
+     */
     public function getUser($id)
     {
         $query = "SELECT * FROM `user` WHERE `id` =" . $id . "";
@@ -34,6 +39,9 @@ class Db
         }
     }
 
+    /**
+     * @param $data
+     */
     public function login($data)
     {
         $query = "SELECT * FROM `user` WHERE `email` ='" . $data["email"] . "' AND
@@ -87,6 +95,9 @@ class Db
         }
     }
 
+    /**
+     * @param $data
+     */
     public function get_learning_data($data)
     {
         $query = "SELECT `id`, `category_id`, `name`, `img_path`, `link`, `created_at` FROM `learning` WHERE id =" . $data["id"];
@@ -115,9 +126,11 @@ class Db
             }
         }
         return $category_data;
-
     }
 
+    /**
+     * @param $data
+     */
     public function add_learning($data)
     {
         session_start();
@@ -153,9 +166,11 @@ class Db
         }
     }
 
+    /**
+     * @param $data
+     */
     public function edit_learning($data)
     {
-//        print_r($data["data"]);die;
         session_start();
         $name = $data["data"]["learning_name"];
         $link = $data["data"]["learning_link"];
@@ -186,7 +201,6 @@ class Db
             if ($category->num_rows > 0) {
                 while ($row = $category->fetch_assoc()) {
                     $category_data[$row["category_id"]][] = $row;
-
                 }
             }
             $full_data = ["status" => "admin_login", "category" => $category_data];
@@ -197,6 +211,9 @@ class Db
         }
     }
 
+    /**
+     * @param $data
+     */
     public function editUser($data)
     {
         if ($data["action"] == "first_login") {
@@ -259,13 +276,16 @@ class Db
         }
     }
 
+    /**
+     * @param $id
+     * @param $path
+     * @param $field_name
+     */
     public function setFilePath($id, $path, $field_name)
     {
-
         $query = "UPDATE user SET " . $field_name . "='$path' WHERE id=" . $id . "";
         $res = $this->conn->query($query);
         if ($res) {
-            //pti poxvi
             $response = ["status" => "file_saved", "type" => $field_name, "img_path" => "http://localhost/eif_bootcamp/eif/" . $path];
             echo json_encode($response);
         } else {
@@ -273,6 +293,9 @@ class Db
         }
     }
 
+    /**
+     * @param $data
+     */
     public function edit_video_status($data)
     {
         $status_video = $data["change"];
@@ -283,6 +306,9 @@ class Db
         }
     }
 
+    /**
+     * @return array
+     */
     public function get_video_status()
     {
         $query = "SELECT `video_status` FROM `user` WHERE 1";
@@ -296,19 +322,23 @@ class Db
         return $v_s;
     }
 
+    /**
+     * @param $data
+     */
     public function see_profile($data)
     {
         $id = $data["id"];
         $query = "SELECT * FROM `user` WHERE `id`= $id";
         $res = $this->conn->query($query);
-        if($res->num_rows > 0){
+        if ($res->num_rows > 0) {
             $res = $res->fetch_assoc();
-//            session_start();
-//            $_SESSION["user_profile"];
             echo json_encode($res);
         }
     }
 
+    /**
+     * log out
+     */
     public function sign_out()
     {
         session_start();

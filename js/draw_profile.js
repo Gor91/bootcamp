@@ -12,14 +12,13 @@ $(document).ready(function () {
             height: "400"
         });
 
-
         $("#video_div").empty();
         $("#video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
             "                            <source id=\"video_player_src\" src=\"" + base_url+data_profile.video_path + "\"  type=\"video/mp4\">\n" +
             "                            Your browser does not support HTML video.\n" +
             "                        </video>\n")
 
-        if(data_profile.new_video_path != ""){
+        if(data_profile.new_video_path && data_profile.new_video_path != ""){
             $("#new_video_div").css("display","block");
             $("#new_video_div").empty();
             $("#new_video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +

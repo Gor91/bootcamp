@@ -3,7 +3,6 @@ require "../config/action.php";
 
 $db = new Db();
 
-// file upload@ cankacac tipi pti arvi user-i id-ov sarqvac papkayi mej hamaptasxanabar img ev video papkaneri mej
 session_start();
 //print_r($_SESSION);die;
 $milliseconds = round(microtime(true) * 1000);
