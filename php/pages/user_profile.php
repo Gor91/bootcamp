@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <div class="wrapper">
     <div class="sign__up__wrapper">
-        <a href="index.html" class="sign__home ">Home</a>
-        <div class="sign__up__left" style="background-image: url(img/bg/profile.png);">
-            <h4 class="sign__up__left__title">APPLY</h4>
+        <a href="../../index.php" class="sign__home ">Home</a>
+        <div class="sign__up__left" style="background-image: url(../../img/bg/profile.png);">
+            <h4 class="sign__up__left__title">PROFILE</h4>
             <footer class="footer">
                 <div class="container">
                     <div class="footer__copyright">&copy; EIF | All rights Reserved 2020</div>
@@ -28,13 +28,13 @@
                     <div class="sign__up__block__title">Personal Details</div>
                     <div class="sign__up__block__cont">
                         <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input1" value="Mkrtich">
+                            <input type="text" class="sign__up__input" id="input1" value="">
                         </div>
                         <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input2" value="Harutyunyan">
+                            <input type="text" class="sign__up__input" id="input2" value="">
                         </div>
                         <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input3" value="m.harutyunyan@gmail.com">
+                            <input type="text" class="sign__up__input" id="input3" value="">
                         </div>
                     </div>
                 </div>
@@ -47,50 +47,45 @@
                         <div class="sign__up__row sign__up__row__textarea">
                             <textarea class="sign__up__input" id="input5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet purus nec, hendrerit ullamcorper eros. Quisque sodales semper urna, sit amet venenatis justo rhoncus sed. Nam pellentesque est quis sem gravida venenatis. Aenean at diam risus. Suspendisse porta in eros quis feugiat. Aliquam hendrerit ligula justo, non lacinia ligula ornare quis. Vivamus volutpat dapibus facilisis. Maecenas et aliquam massa. Mauris in sollicitudin metus. Aenean maximus non arcu sed fermentum. Vivamus magna urna, cursus eu eros id, eleifend mattis lectus. Donec sed pretium lectus. Ut et dolor erat</textarea>
                         </div>
-                        <div class="upload__logo__block">
-                            <img src="" alt="">
+                        <div class="upload__logo__block ">
+                            <img src="" alt="" class="img_data_profile">
                         </div>
-                        <button class="upload__logo">Upload Logo</button>
+
                         <p class="sign__up__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet
                             purus nec,
                         </p>
-                        <div class="upload__video__block">
-                            <img src="" alt="">
+
+                        <div class="upload__video__block" id="video_div">
+                            <video width="400" height="200" id="video_player" controls>
+                                <source id="video_player_src"
+                                        src=""
+                                        type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>                        <br>
+                        <div  class="upload__video__block" id="new_video_div" style="display: none">
+                            <video width="400" height="200" id="video_player" controls>
+                                <source id="new_video_player_src"
+                                        src=""
+                                        type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
                         </div>
-                        <button class="upload__logo">Upload Video</button>
-                        <p class="sign__up__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet
-                            purus nec,
-                        </p>
-                    </div>
-                </div>
-                <div class="sign__up__block">
-                    <div class="sign__up__block__title">Create Password</div>
-                    <div class="sign__up__block__cont">
-                        <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input6" value="Current Password*">
-                        </div>
-                        <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input7" value="New Password*">
-                        </div>
-                        <div class="sign__up__row">
-                            <input type="text" class="sign__up__input" id="input8" value="Confirm New Password*">
-                        </div>
-                        <div class="sign__up__bottom__form">
-                            <button type="submit" class="sign__up__submit">Save</button>
-                            <button class="upload__logo">Cancel</button>
-                        </div>
+
+
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script src="lib/jquery-3.5.1.min.js"></script>
-<script src="lib/popper.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/OwlCarousel/owl.carousel.min.js"></script>
-<script src="js/script.js"></script>
+<script src="../../lib/jquery-3.5.1.min.js"></script>
+<script src="../../lib/popper.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/OwlCarousel/owl.carousel.min.js"></script>
+<script src="../../js/script.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/draw_profile.js"></script>
 </body>
 </html>

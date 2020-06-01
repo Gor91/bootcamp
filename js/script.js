@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $( ".banner__nav__link, .header__link" ).click(function( event ) {
+    $(".banner__nav__link, .header__link").click(function (event) {
         event.preventDefault();
-        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+        $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
     });
 
     // var owl = $('.owl-carousel');
@@ -15,17 +15,17 @@ $(document).ready(function () {
         navigation: true,
         stagePadding: 20,
         scrollPerPage: true,
-        startPosition:300,
-        autoplay:true,
+        startPosition: 300,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
             },
-            600: {
-                items: 3
+            560: {
+                items: 1
             },
-            900: {
-                items: 3
+            650: {
+                items: 2
             },
             1000: {
                 items: 3
@@ -55,4 +55,16 @@ $(document).ready(function () {
             $(".header").removeClass("header__show");
         }
     });
+
+    $('.sign__up__input').on('focus', function () {
+        $(this).addClass('sign__up__input__vall');
+        $('.sign__up__input').blur(function () {
+            // $(this).removeClass('sign__up__input__vall');
+        })
+    });
+    $('.sign__up__input').each(function (k, v) {
+        if ($(this).val() !== " ") {
+            $(this).addClass('sign__up__input__vall');
+        }
+    })
 });

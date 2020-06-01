@@ -41,14 +41,21 @@
   padding-right: 10px;
   flex-direction: column;
 }
-.sign__up__block{
+
+.sign__up__block {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .sign__up__block__cont, .sign__up__form {
   width: 100%;
 }
 
 .sign__home {
   right: 10px;
+}
+
+.about, .agenda, .mentors__speakers,
+.participants, .learning, .contact {
+  padding: 50px 0;
 }
