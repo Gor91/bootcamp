@@ -11,10 +11,10 @@
   position: fixed;
   background-position: top center;
   z-index: 1;
-  height: 100vh;
   height: -moz-available; /* WebKit игнор. */
   height: -webkit-fill-available; /* Mozilla игнор. */
   height: fill-available;
+  height: 100vh;
   left: 0;
   top: 0;
 
@@ -421,4 +421,9 @@
 }
 .participants__name{
   cursor: pointer;
+}
+
+.alert__margin{
+display: none;
+  max-width: max-content;
 }

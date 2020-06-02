@@ -1,2 +1,14 @@
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule ^php(/.*?)(?:\.php)?$ $1 [R=302,L]
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#Redirect http://localhost/eif_bootcamp/eif/php/pages/  https://www.youtube.com/watch?v=FB7RUpJjKuY
+
+#@pakec fayleri tesnelu hnaravorutyun@
+Options -Indexes
+
+#chashxatec
+#Options +MultiViews
+
+#Redirect /eif_bootcamp/eif/pages/admin.php /eif_bootcamp/eif/index.php
+
+#DirectoryIndex home__sign.html

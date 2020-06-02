@@ -59,3 +59,17 @@
 .participants, .learning, .contact {
   padding: 50px 0;
 }
+.organize__item__figure .organize__item__link{
+  margin-right: 0;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.organize__item__figure{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}

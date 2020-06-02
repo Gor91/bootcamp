@@ -1,7 +1,11 @@
 var base_url = "http://localhost/eif_bootcamp/eif/";
 
 $(".sign_in_bk").on("click", function () {
-    location.replace(base_url + "php/pages/sign__in.php");
+    if ($(this).text() === "MY PROFILE") {
+        location.replace(base_url + "php/pages/profile.php");
+    } else {
+        location.replace(base_url + "php/pages/sign__in.php");
+    }
 })
 
 $(".login_in_bk").on("click", function (e) {
@@ -60,44 +64,54 @@ $("#logo_upload").on("click", function (e) {
 
 $("#video_upload").on("click", function (e) {
     e.preventDefault();
-    var file_data = $('#myVideo').prop('files')[0];
-    var form_data = new FormData();
-    form_data.append('file', file_data);
-    $.ajax({
-        url: 'upload.php', // point to server-side PHP script
-        dataType: 'text',  // what to expect back from the PHP script, if anything
-        cache: false,
-        contentType: false,
-        processData: false,
-        data: form_data,
-        type: 'post',
-        success: function (php_script_response) {
-            if (php_script_response && "status" in JSON.parse(php_script_response)) {
-                if (JSON.parse(php_script_response).type === "new_video_path") {
-                    setTimeout(function () {
-                        $("input[name=video_path]").val("uploaded")
-                        //video_div
-                        $("#new_video_div").empty();
-                        $("#new_video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
-                            "                            <source id=\"video_player_src\" src=\"" + JSON.parse(php_script_response).img_path + "\"  type=\"video/mp4\">\n" +
-                            "                            Your browser does not support HTML video.\n" +
-                            "                        </video>\n")
-                    }, 1000)
-                } else {
-                    setTimeout(function () {
-                        $("input[name=video_path]").val("uploaded")
-                        //video_div
-                        $("#video_div").empty();
-                        $("#video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
-                            "                            <source id=\"video_player_src\" src=\"" + JSON.parse(php_script_response).img_path + "\"  type=\"video/mp4\">\n" +
-                            "                            Your browser does not support HTML video.\n" +
-                            "                        </video>\n")
-                    }, 1000)
+    if ($('#myVideo').prop('files')[0]) {
+        var file_data = $('#myVideo').prop('files')[0];
+        var form_data = new FormData();
+        form_data.append('file', file_data);
+        $.ajax({
+            url: 'upload.php', // point to server-side PHP script
+            dataType: 'text',  // what to expect back from the PHP script, if anything
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: form_data,
+            type: 'post',
+            success: function (php_script_response) {
+                if (JSON.parse(php_script_response) === "large_file") {
+                    $(".alert__margin").css("display", "block")
+                    return;
                 }
+                if (php_script_response && "status" in JSON.parse(php_script_response)) {
+                    if (JSON.parse(php_script_response).type === "new_video_path") {
+                        setTimeout(function () {
+                            $("input[name=video_path]").val("uploaded")
+                            //video_div
+                            $("#new_video_div").empty();
+                            $("#new_video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
+                                "                            <source id=\"video_player_src\" src=\"" + JSON.parse(php_script_response).img_path + "\"  type=\"video/mp4\">\n" +
+                                "                            Your browser does not support HTML video.\n" +
+                                "                        </video>\n")
+                        }, 1000)
+                    } else {
+                        setTimeout(function () {
+                            $("input[name=video_path]").val("uploaded")
+                            //video_div
+                            $("#video_div").empty();
+                            $("#video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
+                                "                            <source id=\"video_player_src\" src=\"" + JSON.parse(php_script_response).img_path + "\"  type=\"video/mp4\">\n" +
+                                "                            Your browser does not support HTML video.\n" +
+                                "                        </video>\n")
+                        }, 1000)
+                    }
 
+                }
             }
-        }
-    });
+        });
+    } else {
+        alert("Please choose file");
+
+    }
+
 })
 $(".user_profile").on("click", function (e) {
     $.ajax({
@@ -105,9 +119,9 @@ $(".user_profile").on("click", function (e) {
         url: base_url + "php/login.php",
         data: {action: "see_profile", id: $(this).attr("data-id")},
         success: function (data) {
-            if(data){
+            if (data) {
                 localStorage.removeItem("profile_data");
-                localStorage.setItem("profile_data",data);
+                localStorage.setItem("profile_data", data);
                 location.replace(base_url + "php/pages/user_profile.php");
             }
         }
@@ -425,7 +439,9 @@ $("#learnign_save").on("click", function () {
             url: base_url + "php/login.php",
             data: {action: "add_learning", data: learning_data},
             success: function (data) {
-
+                if(data === '"succesfulli_edited"'){
+                    $(".alert__margin").css("display","block");
+                }
             }
         })
 
@@ -442,6 +458,9 @@ $("#learnign_save").on("click", function () {
             url: base_url + "php/login.php",
             data: {action: "edit_learning", data: learning_data},
             success: function (data) {
+                if(data === '"succesfulli_edited"'){
+                    $(".alert__margin").css("display","block");
+                }
             }
         })
     }

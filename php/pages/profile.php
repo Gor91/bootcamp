@@ -2,18 +2,20 @@
 session_start();
 require "../config/const.php";
 require "../config/action.php";
-require "../config/const.php";
+
 $db = new Db();
 $v_c = $db->get_video_status();
 $video_status = "";
-if($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disabled"){
+if ($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disabled") {
     $video_status = "disabled";
-}else{
+} else {
     $video_status = "";
 }
-//print_r($video_status);die;
-//echo "<pre>";
-//print_r($_SESSION);die;
+
+if (!empty($_SESSION) && $_SESSION["full_data"]["status"] == "admin_login") {
+    header('Location: '.$const["root_path"].'php/pages/admin.php');
+
+}
 if (!empty($_SESSION)) {
     ?>
     <!doctype html>
@@ -23,7 +25,7 @@ if (!empty($_SESSION)) {
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Profile</title>
         <link rel="stylesheet" href="../../css/all.min.css">
         <link rel="stylesheet" href="../../css/style.css">
     </head>
@@ -89,7 +91,7 @@ if (!empty($_SESSION)) {
                             </div>
                             <div class="sign__up__row sign__up__row__textarea">
                                 <?php if ($_SESSION["full_data"]["user_data"]["description"] != "") { ?>
-                                    <textarea  name="description" class="sign__up__input"
+                                    <textarea name="description" class="sign__up__input"
                                               id="input5"><?php echo $_SESSION["full_data"]["user_data"]["description"] ?></textarea>
                                 <?php } else { ?>
                                     <textarea name="description" class="sign__up__input" id="input5"></textarea>
@@ -115,9 +117,7 @@ if (!empty($_SESSION)) {
                                 <button class="upload__logo" id="logo_upload">Upload Logo</button>
                             </div>
                             <p class="sign__up__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit
-                                amet
-                                purus nec,
+
                             </p>
                             <div class="upload__video__block" id="video_div">
                                 <video width="400" height="200" id="video_player" controls>
@@ -131,7 +131,7 @@ if (!empty($_SESSION)) {
                             </div>
                             <?php
 
-                            if($video_status !== "disabled"){ ?>
+                            if ($video_status !== "disabled") { ?>
                                 <div class="upload__video__block" id="new_video_div">
                                     <video width="400" height="200" id="video_player" controls>
                                         <source id="new_video_player_src"
@@ -143,32 +143,29 @@ if (!empty($_SESSION)) {
                             <?php } ?>
                             <input type="hidden" name="video_path">
                             <div class="myfile__hide__row">
-                                <input type="file" id="myVideo" name="video"  class="myfile__hide">
+                                <input <?php echo $video_status;?> type="file" id="myVideo" name="video" class="myfile__hide">
                                 <label for="myVideo" class="upload__logo">
-                                    <img src="../../img/icons/icon-upload.svg"  alt="" class="upload__logo__icon">
+                                    <img src="../../img/icons/icon-upload.svg" alt="" class="upload__logo__icon">
                                     Choose
                                 </label>
-                                <button class="upload__logo" id="video_upload" >Upload Video</button>
+                                <button <?php echo $video_status;?> class="upload__logo" id="video_upload">Upload Video</button>
                             </div>
-                            <p class="sign__up__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit
-                                amet
-                                purus nec,
-                            </p>
+                            <p class="sign__up__desc"></p>
                         </div>
                     </div>
+
                     <div class="sign__up__block">
+
                         <div class="sign__up__block__title">Save Changes ?</div>
+
+
                         <div class="sign__up__block__cont">
-                            <!--                            <div class="sign__up__row">-->
-                            <!--                                <input type="text" class="sign__up__input" id="input6" value="Current Password*">-->
-                            <!--                            </div>-->
-                            <!--                            <div class="sign__up__row">-->
-                            <!--                                <input type="text" class="sign__up__input" id="input7" value="New Password*">-->
-                            <!--                            </div>-->
-                            <!--                            <div class="sign__up__row">-->
-                            <!--                                <input type="text" class="sign__up__input" id="input8" value="Confirm New Password*">-->
-                            <!--                            </div>-->
+                            <div class="alert alert-danger alert-dismissible fade alert__margin show" role="alert">
+                                Large file size, please upload.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
                             <div class="sign__up__bottom__form">
                                 <button type="button" id="profile_save_changes" class="sign__up__submit">Save</button>
                                 <button type="button" class="upload__logo" id="cancel_profile_changes">Cancel</button>

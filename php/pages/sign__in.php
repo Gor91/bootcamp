@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -22,7 +22,7 @@
             </footer>
         </div>
         <div class="sign__up__right">
-            <form  class="sign__up__form">
+            <form class="sign__up__form">
                 <div class="sign__up__block m-0">
                     <div class="sign__up__block__cont">
                         <p style="color: red;display: none" class="alert_wp">Wrong email or password.</p>
@@ -43,8 +43,8 @@
                         <a href="sign__in.php" class="upload__logo">SIGN Up</a>
                     </div>
                     <div class="sign__in__bottom__row">
-<!--                        <p class="sign__in__bottom__title">Forgot Your Password?</p>-->
-<!--                        <a href="#" class="upload__logo">Rest Password</a>-->
+                        <!--                        <p class="sign__in__bottom__title">Forgot Your Password?</p>-->
+                        <!--                        <a href="#" class="upload__logo">Rest Password</a>-->
                     </div>
                 </div>
             </form>

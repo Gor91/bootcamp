@@ -4,17 +4,22 @@ require "../config/action.php";
 $db = new Db();
 
 session_start();
-//print_r($_SESSION);die;
 $milliseconds = round(microtime(true) * 1000);
 $target_dir = "../../uploads/";
 $target_file = $target_dir . basename($_FILES["file"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
+if ($_FILES["file"]["size"] > 100919165) {
+    echo json_encode("large_file");
+    $uploadOk = 0;
+    return;
+}
+//23211408
 if (!file_exists('../../uploads/' . $_SESSION["full_data"]["user_data"]["id"])) {
     mkdir('../../uploads/' . $_SESSION["full_data"]["user_data"]["id"] . "/img", 0777, true);
     mkdir('../../uploads/' . $_SESSION["full_data"]["user_data"]["id"] . "/video/1", 0777, true);
     mkdir('../../uploads/' . $_SESSION["full_data"]["user_data"]["id"] . "/video/2", 0777, true);
 }
+
 if ($imageFileType === "jpg" || $imageFileType === "png" || $imageFileType === "jpeg" || $imageFileType === "gif") {
     if (0 < $_FILES['file']['error']) {
         echo 'Error: ' . $_FILES['file']['error'] . '<br>';

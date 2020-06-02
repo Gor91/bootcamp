@@ -14,9 +14,6 @@ if ($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disab
     $on_video_status = "checked";
     $off_video_status = "";
 }
-//print_r($v_c[0]);die;
-//echo "<pre>";
-//print_r($_SESSION);die;
 if (!empty($_SESSION)) {
     ?>
     <!doctype html>
@@ -26,7 +23,7 @@ if (!empty($_SESSION)) {
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>ADMIN</title>
         <link rel="stylesheet" href="../../css/all.min.css">
         <link rel="stylesheet" href="../../css/style.css">
     </head>
@@ -151,6 +148,12 @@ if (!empty($_SESSION)) {
                     <div class="sign__up__block">
                         <div class="sign__up__block__title">Save Changes ?</div>
                         <div class="sign__up__block__cont">
+                            <div class="alert alert-success alert-dismissible fade alert__margin show" role="alert">
+                                Successfully saved.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
                             <div class="sign__up__bottom__form">
                                 <button type="button" id="learnign_save" class="sign__up__submit">Save</button>
                             </div>

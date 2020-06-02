@@ -3,14 +3,6 @@ require "../config/action.php";
 require "../config/const.php";
 session_start();
 
-//$db =  new Db();
-//$data = $db->getUser(1);
-//echo "<pre>";
-//print_r($data);
-//echo "||||||||||||||";
-//    echo "<pre>";
-//    print_r($_SESSION["full_data"]);die;
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,7 +11,7 @@ session_start();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -110,9 +102,7 @@ session_start();
                             <button class="upload__logo" id="logo_upload">Upload Logo</button>
                         </div>
                         <p class="sign__up__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit
-                            amet
-                            purus nec,
+
                         </p>
                         <div class="upload__video__block" id="video_div">
                             <img src="../../img/icons/icon-video.png" alt="">
@@ -127,9 +117,7 @@ session_start();
                             <button class="upload__logo" id="video_upload" >Upload Video</button>
                         </div>
                         <p class="sign__up__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit
-                            amet
-                            purus nec,
+
                         </p>
                     </div>
                 </div>

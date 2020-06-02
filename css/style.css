@@ -8627,7 +8627,7 @@ p {
 .agenda__item {
   min-width: 313px !important;
   max-width: 313px !important;
-  height: 465px;
+  height: 485px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border: 1px solid #707070;
   opacity: 1;
@@ -8773,7 +8773,7 @@ p {
 .speakers__title__icon {
   margin-left: 30px; }
 
-.speakers {
+.speakers, .speakers > a {
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -8787,7 +8787,8 @@ p {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  object-position: center; }
 
 .speakers__name {
   text-align: center;
@@ -8797,7 +8798,8 @@ p {
   font-weight: 900;
   letter-spacing: 1.68px;
   color: #DC2F27;
-  opacity: 1; }
+  opacity: 1;
+  white-space: nowrap; }
 
 .speakers__position, .speakers__company {
   text-align: center;
@@ -8946,7 +8948,8 @@ p {
 .organize__item__link {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: flex-start;
+  width: 100%; }
 
 .organize__item__title {
   text-align: left;
@@ -8962,16 +8965,19 @@ p {
 
 .organize__item__figure {
   display: flex;
-  align-items: center; }
+  align-items: flex-start; }
   .organize__item__figure .organize__item__link {
     margin-right: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start; }
+    .organize__item__figure .organize__item__link .organize__item__img {
+      object-fit: contain;
+      height: 175px; }
     .organize__item__figure .organize__item__link:last-child {
       margin-right: 0; }
-    .organize__item__figure .organize__item__link .organize__item__img {
-      object-fit: contain; }
+      .organize__item__figure .organize__item__link:last-child .organize__item__img {
+        height: 65px; }
 
 .footer {
   padding: 20px 0;
@@ -9006,12 +9012,12 @@ p {
   position: fixed;
   background-position: top center;
   z-index: 1;
-  height: 100vh;
   height: -moz-available;
   /* WebKit игнор. */
   height: -webkit-fill-available;
   /* Mozilla игнор. */
   height: fill-available;
+  height: 100vh;
   left: 0;
   top: 0; }
   .sign__up__left:after {
@@ -9344,6 +9350,10 @@ p {
 .participants__name {
   cursor: pointer; }
 
+.alert__margin {
+  display: none;
+  max-width: max-content; }
+
 @media only screen and (max-width: 1170px) {
   .header .header__list {
     margin: 0 15px; }
@@ -9396,8 +9406,21 @@ p {
 
   .about, .agenda, .mentors__speakers,
   .participants, .learning, .contact {
-    padding: 50px 0; } }
-@media only screen and (max-width: 1170px) {
+    padding: 50px 0; }
+
+  .organize__item__figure .organize__item__link {
+    margin-right: 0;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 15px; }
+    .organize__item__figure .organize__item__link:last-child {
+      margin-bottom: 0; }
+
+  .organize__item__figure {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start; } }
+@media only screen and (max-width: 768px) {
   .banner__title {
     font-size: 40px; }
 
@@ -9408,8 +9431,11 @@ p {
     width: 100%; }
 
   .title, .sign__up__right__title {
-    font-size: 28px; } }
-@media only screen and (max-width: 1170px) {
+    font-size: 28px; }
+
+  .organize__item__figure .organize__item__link:last-child .organize__item__img {
+    height: 60px; } }
+@media only screen and (max-width: 560px) {
   .agenda__item {
     margin: 0 auto; } }
 

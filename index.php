@@ -24,7 +24,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>EIF Bootcamp</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -68,7 +68,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
         <div class="container">
             <figure class="banner__logo">
                 <a href="index.php" class="banner__logo__link">
-                    <img src="img/logo/logo-eif.png" alt="" class="banner__logo__img">
+                    <img src="img/logo/logo-eif.png" width="150" height="50" alt="" class="banner__logo__img">
                 </a>
             </figure>
             <div class="row justify-content-between banner__content ">
@@ -143,86 +143,121 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
         </div>
         <div class="agenda__cont owl-carousel">
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 1</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">DAY 1 Session 1</p>
+                <p class="agenda__day__small">June 3, 2020</p>
+                <p class="agenda__day__small">18:00 – 19:00</p>
+                <h4 class="agenda__item__title">WELCOME – OPENING</h4>
+                <ul>
+                    <li style="list-style-type: disc;">IMG, RMG grant project introduction</li>
+                    <li style="list-style-type: disc;">What will you gain from the Bootcamp</li>
+                </ul>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar1.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
+                    <img src="img/users/18.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Bagrat Yengibaryan</p>
                 </div>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar2.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                    <img src="img/users/17.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name"> Amalya Yeghoyan</p>
                 </div>
 
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 2</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">DAY 1 Session 2</p>
+                <p class="agenda__day__small">June 3, 2020</p>
+                <p class="agenda__day__small">19:00 – 20:00</p>
+                <ul>
+                    <li style="list-style-type: disc;">How to make your product win the competitors?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
+                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                </ul>
+                <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar1.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
-                </div>
-                <div class="agenda__speakers__row">
-                    <img src="img/users/avatar2.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                    <img src="img/users/4.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Peter Michaelian
+                    </p>
                 </div>
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 3</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">Day 2 Session 3</p>
+                <p class="agenda__day__small">June 4, 2020</p>
+                <p class="agenda__day__small">21:00-22:00</p>
+                <ul>
+                    <li style="list-style-type: disc;">How to make your product win the competitors?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
+                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                </ul>
+                <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar1.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
-                </div>
-                <div class="agenda__speakers__row">
-                    <img src="img/users/avatar2.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                    <img src="img/users/2.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Zarik Poghossian</p>
                 </div>
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 4</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">Day 3 Session 4</p>
+                <p class="agenda__day__small"> June 5, 2020</p>
+                <p class="agenda__day__small">14:00-15:00</p>
+                <ul>
+                    <li style="list-style-type: disc;">How to make your product win the competitors?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
+                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                </ul>
+                <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar1.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
-                </div>
-                <div class="agenda__speakers__row">
-                    <img src="img/users/avatar2.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                    <img src="img/users/5.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Yeva Hyusyan</p>
                 </div>
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 5</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">Day 4 Session 5</p>
+                <p class="agenda__day__small">June 8, 2020</p>
+                <p class="agenda__day__small">19:00-20:00</p>
+                <ul>
+                    <li style="list-style-type: disc;">How to make your product win the competitors?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
+                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                </ul>
+                <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="img/users/avatar1.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
-                </div>
-                <div class="agenda__speakers__row">
-                    <img src="img/users/avatar2.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                    <img src="img/users/16.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Tania Sahakian</p>
                 </div>
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 6</p>
-                <p class="agenda__day__small">15th May, 2020</p>
-                <p class="agenda__day__small">11:00-13:00</p>
-                <h4 class="agenda__item__title">Introduction on Financial & Legal Issues</h4>
+                <p class="agenda__day__big">Day 5 Session 6</p>
+                <p class="agenda__day__small">June 9, 2020</p>
+                <p class="agenda__day__small">14:00-15:00</p>
+                <h4 class="agenda__item__title">CONTRACTING, LEGAL AND FINANCIAL ISSUES</h4>
+                <p>Q&A session</p>
+                <h5 class="agenda__speakers__title">Speakers</h5>
+                <div class="agenda__speakers__row">
+                    <img src="img/users/1.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Aram Khachatryan</p>
+                </div>
+                <div class="agenda__speakers__row">
+                    <img src="img/users/3.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Knarik Barseghyan</p>
+                </div>
+            </div>
+            <div class="item agenda__item">
+                <p class="agenda__day__big">Day 6 Session</p>
+                <p class="agenda__day__small">June 10, 2020</p>
+                <p class="agenda__day__small">14:00-15:00</p>
+                <ul>
+                    <li style="list-style-type: disc;">How to make your product win the competitors?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
+                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                </ul>
+                <p>Q&A session</p>
+                <h5 class="agenda__speakers__title">Speakers</h5>
+                <div class="agenda__speakers__row">
+                    <img src="img/users/15.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Mikayel Vardanyan</p>
+                </div>
             </div>
         </div>
     </section>
@@ -238,20 +273,27 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                                                           class="speakers__title__icon"></h3>
                 <div class="row align-items-start">
                     <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/bagrat-yengibaryan-30865013/" target="_blank">
+                            <img src="img/users/18.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Bagrat Yengibaryan</h4>
+                            <p class="speakers__position">Director at</p>
+                            <p class="speakers__company">EIF</p>
+                        </a>
+                    </div>
+                    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/amalya-yeghoyan-a045ba33/" target="_blank">
+                            <img src="img/users/17.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Amalya Yeghoyan</h4>
+                            <p class="speakers__position">Project Manager at</p>
+                            <p class="speakers__company">EIF</p>
+                        </a>
+                    </div>
+                    <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/peter-michaelian-0b7087b/" target="_blank">
                             <img src="img/users/4.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Peter Michaelian</h4>
                             <p class="speakers__position">Head of Design at</p>
                             <p class="speakers__company">Dolby</p>
-                        </a>
-                    </div>
-                    <div class="speakers col-md-3 col-sm-12">
-                        <a href="https://www.linkedin.com/in/gytenis/" target="_blank">
-                            <img src="img/users/2.png" alt="" class="speakers__img">
-                            <h4 class="speakers__name">Gytenis Galkis</h4>
-                            <p class="speakers__position">Partner &amp; Licensed Unicorn Hunter at 70 Ventures Fund
-                                Founder &amp; Member of the Board at </p>
-                            <p class="speakers__company">Lithuanian Business Angel Network</p>
                         </a>
                     </div>
                     <div class="speakers col-md-3 col-sm-12">
@@ -276,6 +318,31 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         <p class="speakers__position">Deputy director of finance at </p>
                         <p class="speakers__company">EIF</p>
                     </div>
+                    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/zarik-boghossian-37ab/" target="_blank">
+                            <img src="img/users/2.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Zarik Boghossian</h4>
+                            <p class="speakers__position">Founder and CEO of</p>
+                            <p class="speakers__company">ZEMA Enterprises</p>
+                        </a>
+                    </div>
+                    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/mikayelvardanyan/" target="_blank">
+                            <img src="img/users/15.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Mikayel Vardanyan</h4>
+                            <p class="speakers__position">CPO at</p>
+                            <p class="speakers__company">Picsart</p>
+                        </a>
+                    </div>
+                    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/tania-sahakian/" target="_blank">
+                            <img src="img/users/16.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Tania Sahakian</h4>
+                            <p class="speakers__position">Director at</p>
+                            <p class="speakers__company">DISQO</p>
+                        </a>
+                    </div>
+
                 </div>
             </div>
             <div class="speakers__block">
@@ -437,11 +504,11 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
             <div class="row">
                 <div class="contact__info col-md-3 col-sm-12">
                     <h3 class="contact__info__title">email</h3>
-                    <a href="mailto:jon.doe@eif.am" class="contact__info__link">jon.doe@eif.am</a>
+                    <a href="mailto:jon.doe@eif.am" class="contact__info__link">info@eif.am</a>
                 </div>
                 <div class="contact__info col-md-3 col-sm-12">
                     <h3 class="contact__info__title">phone</h3>
-                    <a href="tel:+374000000" class="contact__info__link">(+374) 00 000 000</a>
+                    <a href="tel:+374000000" class="contact__info__link">(+374)11219797</a>
                 </div>
             </div>
             <div class="row organize">
