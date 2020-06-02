@@ -186,6 +186,6 @@ if (!empty($_SESSION)) {
     </body>
     </html>
 <?php } else {
-    header('Location: http://localhost/eif_bootcamp/eif/index.php');
+    header('Location: '.$const["root_path"]);
 } ?>
 

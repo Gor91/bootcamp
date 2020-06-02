@@ -4,7 +4,6 @@ include "const.php";
 class Db
 {
     private $conn;
-
     /**
      * Db constructor.
      */

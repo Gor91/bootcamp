@@ -81,7 +81,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             INNOVATION MATCHING GRANT BOOTCAMP
                         </h1>
                         <?php if ($apply) { ?>
-                            <a href="<?php echo $href ?>" class="banner__apply">APPLY</a>";
+                            <a href="<?php echo $href ?>" class="banner__apply">APPLY</a>
                         <?php } ?>
 
                     </div>
