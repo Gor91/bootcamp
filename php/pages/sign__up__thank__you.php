@@ -21,7 +21,7 @@ $categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
     <div class="sign__up__wrapper">
         <a href="../../index.php" class="sign__home ">Home</a>
         <div class="sign__up__left" style="background-image: url(../../img/bg/sign__up.png);">
-            <h4 class="sign__up__left__title">Register June 3-10</h4>
+            <h4 class="sign__up__left__title">Register</h4>
             <footer class="footer">
                 <div class="container">
                     <div class="footer__copyright">&copy; EIF | All rights Reserved 2020</div>
@@ -31,7 +31,7 @@ $categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
         <div class="sign__up__right">
             <h1 class="sign__up__right__title">Thank You!</h1>
             <p class="thank__desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet purus nec,
+                
             </p>
             <a href="sign__in.php" class="sign__up__submit">Sign In</a>
         </div>
