@@ -16,7 +16,7 @@ $(document).ready(function () {
         stagePadding: 20,
         scrollPerPage: true,
         startPosition: 300,
-        autoplay: true,
+        autoplay: false,
         responsive: {
             0: {
                 items: 1

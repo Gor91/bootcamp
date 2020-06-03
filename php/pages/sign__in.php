@@ -14,7 +14,7 @@
     <div class="sign__up__wrapper">
         <a href="../../index.php" class="sign__home">Home</a>
         <div class="sign__up__left" style="background-image: url(../../img/bg/sign_in.png);">
-            <h4 class="sign__up__left__title">APPLY</h4>
+            <h4 class="sign__up__left__title">Register June 3-10</h4>
             <footer class="footer">
                 <div class="container">
                     <div class="footer__copyright">&copy; EIF | All rights Reserved 2020</div>

@@ -81,7 +81,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             INNOVATION MATCHING GRANT BOOTCAMP
                         </h1>
                         <?php if ($apply) { ?>
-                            <a href="<?php echo $href ?>" class="banner__apply">APPLY</a>
+                            <a href="<?php echo $href ?>" class="banner__apply">Register June 3-10</a>
                         <?php } ?>
 
                     </div>
@@ -122,7 +122,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                     <div class="col-md-6 col-sm-12 p-sm-1">
                         <h2 class="about__title title">About</h2>
                         <p class="about__desc">
-                            Innovation Matching Grants bootcamp event is organized to give the startups an exclusive
+                            Innovation Matching Grant bootcamp event is organized to give the startups an exclusive
                             opportunity to learn from top speakers, gain valuable skills and prepare for pitching.
                             Startups will also have one on one learning sessions with professional mentors who will
                             share their knowledge about making attractive presentations for the upcoming Venture
@@ -520,8 +520,8 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         </a>
                     </figure>
                 </div>
-                <div class="col-md-4 col-sm-12 organize__item">
-                    <h3 class="organize__item__title">IN PARTNERSHIP WITH</h3>
+                <div class="col-md-8 col-sm-12 organize__item ">
+                    <h3 class="organize__item__title text-center">IN PARTNERSHIP WITH</h3>
                     <figure class="organize__item__figure">
                         <a href="#" class="organize__item__link">
                             <img src="img/logo/logo-hti.png" alt="" class="organize__item__img">
