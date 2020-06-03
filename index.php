@@ -64,7 +64,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
     </header>
     <!--    end header-->
     <!--    start banner-->
-    <section id="banner" class="banner" style="background-image: url(img/banner/bg.png);">
+    <section id="banner" class="banner">
         <div class="container">
             <figure class="banner__logo">
                 <a href="index.php" class="banner__logo__link">
