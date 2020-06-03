@@ -32,6 +32,8 @@ class Db
         $res = $this->conn->query($query);
         $res = $res->fetch_assoc();
         if ($res) {
+            session_start();
+            $_SESSION["full_data"]["user_data"] = $res;
             return $res;
         } else {
             echo "ERROR";

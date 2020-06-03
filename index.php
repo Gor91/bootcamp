@@ -168,8 +168,12 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 <p class="agenda__day__small">19:00–20:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
-                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
-                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
+                        dollars?
+                    </li>
+                    <li style="list-style-type: disc;">How to pitch your startup and what is important for an investor
+                        to hear from you?
+                    </li>
                 </ul>
                 <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
@@ -185,8 +189,12 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 <p class="agenda__day__small">21:00-22:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
-                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
-                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
+                        dollars?
+                    </li>
+                    <li style="list-style-type: disc;">How to pitch your startup and what is important for an investor
+                        to hear from you?
+                    </li>
                 </ul>
                 <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
@@ -201,8 +209,12 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 <p class="agenda__day__small">14:00-15:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
-                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
-                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
+                        dollars?
+                    </li>
+                    <li style="list-style-type: disc;">How to pitch your startup and what is important for an investor
+                        to hear from you?
+                    </li>
                 </ul>
                 <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
@@ -217,21 +229,25 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 <p class="agenda__day__small">19:00-20:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
-                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
-                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
+                        dollars?
+                    </li>
+                    <li style="list-style-type: disc;">How to pitch your startup and what is important for an investor
+                        to hear from you?
+                    </li>
                 </ul>
                 <p>Q&A session</p>
-                <h5 class="agenda__speakers__title">Speakers</h5>
+<!--                <h5 class="agenda__speakers__title">Speakers</h5>-->
                 <div class="agenda__speakers__row">
-                    <img src="img/users/16.png" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name">Tania Sahakian</p>
+                    <img src="" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name"></p>
                 </div>
             </div>
             <div class="item agenda__item">
                 <p class="agenda__day__big">Day 5 Session 6</p>
                 <p class="agenda__day__small">June 9, 2020</p>
                 <p class="agenda__day__small">14:00-15:00</p>
-                <h4 class="agenda__item__title">CONTRACTING, LEGAL AND FINANCIAL ISSUES</h4>
+                <p>CONTRACTING, LEGAL AND FINANCIAL ISSUES</p>
                 <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
@@ -249,8 +265,12 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 <p class="agenda__day__small">14:00-15:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
-                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
-                    <li  style="list-style-type: disc;">How to pitch your startup and what is important for an investor to hear from you?</li>
+                    <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
+                        dollars?
+                    </li>
+                    <li style="list-style-type: disc;">How to pitch your startup and what is important for an investor
+                        to hear from you?
+                    </li>
                 </ul>
                 <p>Q&A session</p>
                 <h5 class="agenda__speakers__title">Speakers</h5>
@@ -334,15 +354,6 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             <p class="speakers__company">Picsart</p>
                         </a>
                     </div>
-                    <div class="speakers col-md-3 col-sm-12">
-                        <a href="https://www.linkedin.com/in/tania-sahakian/" target="_blank">
-                            <img src="img/users/16.png" alt="" class="speakers__img">
-                            <h4 class="speakers__name">Tania Sahakian</h4>
-                            <p class="speakers__position">Director at</p>
-                            <p class="speakers__company">DISQO</p>
-                        </a>
-                    </div>
-
                 </div>
             </div>
             <div class="speakers__block">
@@ -353,24 +364,24 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         <a href="https://www.linkedin.com/in/astipili/" target="_blank">
                             <img src="img/users/12.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Astghik Piliposyan</h4>
-                                                        <p class="speakers__position">Partnerships Manager at</p>
-                                                        <p class="speakers__company">Krisp</p>
+                            <p class="speakers__position">Partnerships Manager at</p>
+                            <p class="speakers__company">Krisp</p>
                         </a>
                     </div>
                     <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/tterian/" target="_blank">
                             <img src="img/users/14.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Tigran Astvatsatryan</h4>
-                                                        <p class="speakers__position">General Manager(Armenia) at</p>
-                                                        <p class="speakers__company">Vineti</p>
+                            <p class="speakers__position">General Manager(Armenia) at</p>
+                            <p class="speakers__company">Vineti</p>
                         </a>
                     </div>
                     <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/narinekotikyan/" target="_blank">
                             <img src="img/users/13.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Narine Kotikyan</h4>
-                                                        <p class="speakers__position">Head of Growth and Marketing at </p>
-                                                        <p class="speakers__company">DevTeam.Space</p>
+                            <p class="speakers__position">Head of Growth and Marketing at </p>
+                            <p class="speakers__company">DevTeam.Space</p>
                         </a>
                     </div>
 
@@ -378,8 +389,8 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         <a href="https://www.linkedin.com/in/artak-aloyan-30b10a5/" target="_blank">
                             <img src="img/users/11.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Artak Aloyan</h4>
-                                                        <p class="speakers__position">Trainer at </p>
-                                                        <p class="speakers__company">U.S. Peace Corps Armenia</p>
+                            <p class="speakers__position">Trainer at </p>
+                            <p class="speakers__company">U.S. Peace Corps Armenia</p>
                         </a>
                     </div>
                 </div>
@@ -546,6 +557,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
     </footer>
     <!--    end footer-->
 </div>
+
 <script src="lib/jquery-3.5.1.min.js"></script>
 <script src="lib/popper.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
