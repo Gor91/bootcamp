@@ -7,7 +7,7 @@
 -- Версия сервера: 5.7.30-0ubuntu0.18.04.1
 -- Версия PHP: 7.2.24-0ubuntu0.18.04.6
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO"; 
 SET time_zone = "+00:00";
 
 
