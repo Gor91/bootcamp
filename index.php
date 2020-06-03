@@ -145,7 +145,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
             <div class="item agenda__item">
                 <p class="agenda__day__big">DAY 1 Session 1</p>
                 <p class="agenda__day__small">June 3, 2020</p>
-                <p class="agenda__day__small">18:00 – 19:00</p>
+                <p class="agenda__day__small">18:00–19:00</p>
                 <h4 class="agenda__item__title">WELCOME – OPENING</h4>
                 <ul>
                     <li style="list-style-type: disc;">IMG, RMG grant project introduction</li>
@@ -165,7 +165,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
             <div class="item agenda__item">
                 <p class="agenda__day__big">DAY 1 Session 2</p>
                 <p class="agenda__day__small">June 3, 2020</p>
-                <p class="agenda__day__small">19:00 – 20:00</p>
+                <p class="agenda__day__small">19:00–20:00</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
                     <li style="list-style-type: disc;">Why do you need investment and how to raise your first million dollars?</li>
@@ -244,7 +244,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                 </div>
             </div>
             <div class="item agenda__item">
-                <p class="agenda__day__big">Day 6 Session</p>
+                <p class="agenda__day__big">Day 6 Session 7</p>
                 <p class="agenda__day__small">June 10, 2020</p>
                 <p class="agenda__day__small">14:00-15:00</p>
                 <ul>
@@ -353,24 +353,24 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         <a href="https://www.linkedin.com/in/astipili/" target="_blank">
                             <img src="img/users/12.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Astghik Piliposyan</h4>
-                            <!--                            <p class="speakers__position">Position, Name of </p>-->
-                            <!--                            <p class="speakers__company">Company</p>-->
+                                                        <p class="speakers__position">Partnerships Manager at</p>
+                                                        <p class="speakers__company">Krisp</p>
                         </a>
                     </div>
                     <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/tterian/" target="_blank">
                             <img src="img/users/14.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Tigran Astvatsatryan</h4>
-                            <!--                            <p class="speakers__position">Position, Name of </p>-->
-                            <!--                            <p class="speakers__company">Company</p>-->
+                                                        <p class="speakers__position">General Manager(Armenia) at</p>
+                                                        <p class="speakers__company">Vineti</p>
                         </a>
                     </div>
                     <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/narinekotikyan/" target="_blank">
                             <img src="img/users/13.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Narine Kotikyan</h4>
-                            <!--                            <p class="speakers__position">Position, Name of </p>-->
-                            <!--                            <p class="speakers__company">Company</p>-->
+                                                        <p class="speakers__position">Head of Growth and Marketing at </p>
+                                                        <p class="speakers__company">DevTeam.Space</p>
                         </a>
                     </div>
 
@@ -378,8 +378,8 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                         <a href="https://www.linkedin.com/in/artak-aloyan-30b10a5/" target="_blank">
                             <img src="img/users/11.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Artak Aloyan</h4>
-                            <!--                            <p class="speakers__position">Position, Name of </p>-->
-                            <!--                            <p class="speakers__company">Company</p>-->
+                                                        <p class="speakers__position">Trainer at </p>
+                                                        <p class="speakers__company">U.S. Peace Corps Armenia</p>
                         </a>
                     </div>
                 </div>

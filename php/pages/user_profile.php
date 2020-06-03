@@ -45,15 +45,13 @@
                             <input type="text" class="sign__up__input" id="input4" value="Start Up XYZ">
                         </div>
                         <div class="sign__up__row sign__up__row__textarea">
-                            <textarea class="sign__up__input" id="input5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet purus nec, hendrerit ullamcorper eros. Quisque sodales semper urna, sit amet venenatis justo rhoncus sed. Nam pellentesque est quis sem gravida venenatis. Aenean at diam risus. Suspendisse porta in eros quis feugiat. Aliquam hendrerit ligula justo, non lacinia ligula ornare quis. Vivamus volutpat dapibus facilisis. Maecenas et aliquam massa. Mauris in sollicitudin metus. Aenean maximus non arcu sed fermentum. Vivamus magna urna, cursus eu eros id, eleifend mattis lectus. Donec sed pretium lectus. Ut et dolor erat</textarea>
+                            <textarea class="sign__up__input" id="input5"></textarea>
                         </div>
                         <div class="upload__logo__block ">
                             <img src="" alt="" class="img_data_profile">
                         </div>
 
                         <p class="sign__up__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue est, rhoncus sit amet
-                            purus nec,
                         </p>
 
                         <div class="upload__video__block" id="video_div">
