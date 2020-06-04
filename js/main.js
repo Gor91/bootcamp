@@ -113,6 +113,8 @@ $("#video_upload").on("click", function (e) {
             },
             error:function (err) {
                 if(err.statusText === "Request Entity Too Large"){
+                    alert("ASD");
+                    $(".loader__all").css("display","none");
                     $(".alert__margin").css("display", "block")
                 }
             }
