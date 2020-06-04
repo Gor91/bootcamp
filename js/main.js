@@ -64,7 +64,7 @@ $("#logo_upload").on("click", function (e) {
 
 $("#video_upload").on("click", function (e) {
     e.preventDefault();
-    $(".loader__all").css("display","flex");
+    $(".loader__all").css("display","block");
     if ($('#myVideo').prop('files')[0]) {
         var file_data = $('#myVideo').prop('files')[0];
         var form_data = new FormData();
@@ -79,6 +79,8 @@ $("#video_upload").on("click", function (e) {
             type: 'post',
             success: function (php_script_response) {
                 if (JSON.parse(php_script_response) === "large_file") {
+                    console.log("large file");
+                    $(".loader__all").css("display","none");
                     $(".alert__margin").css("display", "block")
                     return;
                 }
