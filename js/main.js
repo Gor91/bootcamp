@@ -1,4 +1,4 @@
-var base_url = "http://localhost/eif_bootcamp/eif/";
+var base_url = "http://bootcamp.eif.am/";
 
 $(".sign_in_bk").on("click", function () {
     if ($(this).text() === "MY PROFILE") {
