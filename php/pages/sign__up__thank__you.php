@@ -41,6 +41,6 @@ $categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
 <script src="../../lib/popper.min.js"></script>
 <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../lib/OwlCarousel/owl.carousel.min.js"></script>
-<script src="../../js/script.js"></script>
+<script src="../../js/script.js?t=<?=time()?>"></script>
 </body>
 </html>
