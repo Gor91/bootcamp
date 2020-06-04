@@ -15,7 +15,7 @@ if ($_POST && array_key_exists("action", $_POST)) {
     }
     if($_POST["action"]== "log_out"){
         $db = new Db();
-        $db->sign_out($_POST);
+        $db->sign_out();
     }
     if($_POST["action"]== "get_learning_data"){
         $db = new Db();

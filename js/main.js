@@ -109,18 +109,16 @@ $("#video_upload").on("click", function (e) {
                     }
 
                 }
-                if(!php_script_response){
-                    $(".loader__all").css("display","none");
-                    $(".alert__margin").css("display", "block")
-                   $("#alert_span").text("Something went wrong, please contact our administrator.")
-                }
+                if(!php_script_response){$(".loader__all").css("display","none");$(".alert__margin").css("display", "block");$("#alert_span").text("Something went wrong, please contact our administrator.")}
             },
             error:function (err) {
-                console.log(err)
+                if(err.statusText === "Request Entity Too Large"){
+                    $(".alert__margin").css("display", "block")
+                }
             }
         });
     } else {
-        alert("Please choose file");
+        $(".loader__all").css("display","none");$(".alert__margin").css("display", "block");$("#alert_span").text("Please choose a file.");
     }
 
 })
