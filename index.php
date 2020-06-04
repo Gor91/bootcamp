@@ -122,12 +122,11 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                     <div class="col-md-6 col-sm-12 p-sm-1">
                         <h2 class="about__title title">About</h2>
                         <p class="about__desc">
-                            Innovation Matching Grant bootcamp event is organized to give the startups an exclusive
-                            opportunity to learn from top speakers, gain valuable skills and prepare for pitching.
-                            Startups will also have one on one learning sessions with professional mentors who will
-                            share their knowledge about making attractive presentations for the upcoming Venture
-                            Forum. This event is a great chance to gain entrepreneurship knowledge for building a
-                            successful startup with the help of speakers, mentors and useful learning materials.
+                            IMG Bootcamp is here to help ambitious startups and founders to grow. The bootcamp provides a unique opportunity
+                            to learn from prominent local and international entrepreneurs and industry experts through online workshops and 1
+                            on 1 mentorship sessions. Throughout the program startups will work with mentors on their pitch & presentation and
+                            prepare for showcasing it during the Venture Forum. The bootcamp will also help to gain insights about the startup
+                            development, such as product development, growth and funding attraction.
                         </p>
                     </div>
                 </div>
