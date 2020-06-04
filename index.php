@@ -563,6 +563,6 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/OwlCarousel/owl.carousel.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1"></script>
 </body>
 </html>
