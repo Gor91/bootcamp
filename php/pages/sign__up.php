@@ -134,7 +134,7 @@ session_start();
                                 Password*</label>
                         </div>
                         <div class="alert alert-danger alert-dismissible fade alert__margin show" role="alert">
-                            The file size is large please upload it up to 100 mb file.
+                            <span id="alert_span">The file size is large please upload it up to 100 mb file.</span>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

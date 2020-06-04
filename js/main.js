@@ -78,8 +78,7 @@ $("#video_upload").on("click", function (e) {
             data: form_data,
             type: 'post',
             success: function (php_script_response) {
-                if (JSON.parse(php_script_response) === "large_file") {
-                    console.log("large file");
+                if (php_script_response && JSON.parse(php_script_response) === "large_file") {
                     $(".loader__all").css("display","none");
                     $(".alert__margin").css("display", "block")
                     return;
@@ -87,7 +86,6 @@ $("#video_upload").on("click", function (e) {
                 if (php_script_response && "status" in JSON.parse(php_script_response)) {
                     if (JSON.parse(php_script_response).type === "new_video_path") {
                         $(".loader__all").css("display","none");
-
                         setTimeout(function () {
                             $("input[name=video_path]").val("uploaded")
                             //video_div
@@ -111,6 +109,14 @@ $("#video_upload").on("click", function (e) {
                     }
 
                 }
+                if(!php_script_response){
+                    $(".loader__all").css("display","none");
+                    $(".alert__margin").css("display", "block")
+                   $("#alert_span").text("Something went wrong, please contact our administrator.")
+                }
+            },
+            error:function (err) {
+                console.log(err)
             }
         });
     } else {
