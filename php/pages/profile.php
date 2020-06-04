@@ -11,7 +11,7 @@ if ($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disab
 } else {
     $video_status = "";
 }
-
+$categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
 if (!empty($_SESSION) && $_SESSION["full_data"]["status"] == "admin_login") {
     header('Location: '.$const["root_path"].'php/pages/admin.php');
 

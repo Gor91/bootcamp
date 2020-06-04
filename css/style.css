@@ -9024,7 +9024,8 @@ div#preload {
   justify-content: center; }
 
 .loader__all {
-  display: none; }
+  display: none;
+}
 
 .sk-folding-cube {
   top: 50%;

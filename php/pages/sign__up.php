@@ -133,6 +133,12 @@ session_start();
                             <label for="input7" class="sign__up__label" id="confirm_pass_label">Confirm
                                 Password*</label>
                         </div>
+                        <div class="alert alert-danger alert-dismissible fade alert__margin show" role="alert">
+                            <span id="alert_span">The file size is large please upload it up to 100 mb file.</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                         <button type="button" class="sign__up__submit" id="sign_up_reg">Complete</button>
                     </div>
                 </div>

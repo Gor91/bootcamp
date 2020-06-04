@@ -1,4 +1,4 @@
-var base_url = "http://localhost/eif_bootcamp/eif/";
+var base_url = "http://bootcamp.eif.am/";
 
 $(".sign_in_bk").on("click", function () {
     if ($(this).text() === "MY PROFILE") {
@@ -64,7 +64,7 @@ $("#logo_upload").on("click", function (e) {
 
 $("#video_upload").on("click", function (e) {
     e.preventDefault();
-    $(".loader__all").css("display","flex");
+    $(".loader__all").css("display","block");
     if ($('#myVideo').prop('files')[0]) {
         var file_data = $('#myVideo').prop('files')[0];
         var form_data = new FormData();
@@ -78,14 +78,14 @@ $("#video_upload").on("click", function (e) {
             data: form_data,
             type: 'post',
             success: function (php_script_response) {
-                if (JSON.parse(php_script_response) === "large_file") {
+                if (php_script_response && JSON.parse(php_script_response) === "large_file") {
+                    $(".loader__all").css("display","none");
                     $(".alert__margin").css("display", "block")
                     return;
                 }
                 if (php_script_response && "status" in JSON.parse(php_script_response)) {
                     if (JSON.parse(php_script_response).type === "new_video_path") {
                         $(".loader__all").css("display","none");
-
                         setTimeout(function () {
                             $("input[name=video_path]").val("uploaded")
                             //video_div
@@ -109,6 +109,14 @@ $("#video_upload").on("click", function (e) {
                     }
 
                 }
+                if(!php_script_response){
+                    $(".loader__all").css("display","none");
+                    $(".alert__margin").css("display", "block")
+                   $("#alert_span").text("Something went wrong, please contact our administrator.")
+                }
+            },
+            error:function (err) {
+                console.log(err)
             }
         });
     } else {

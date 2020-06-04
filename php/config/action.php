@@ -287,7 +287,7 @@ class Db
         $query = "UPDATE user SET " . $field_name . "='$path' WHERE id=" . $id . "";
         $res = $this->conn->query($query);
         if ($res) {
-            $response = ["status" => "file_saved", "type" => $field_name, "img_path" => "http://localhost/eif_bootcamp/eif/" . $path];
+            $response = ["status" => "file_saved", "type" => $field_name, "img_path" => "http://bootcamp.eif.am/" . $path];
             echo json_encode($response);
         } else {
             echo $this->conn->error;

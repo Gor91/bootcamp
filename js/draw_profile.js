@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var base_url = "http://localhost/eif_bootcamp/eif/";
+    var base_url = "http://bootcamp.eif.am/";
     if(localStorage.getItem("profile_data")){
         let data_profile = JSON.parse(localStorage.getItem("profile_data"))
         data_profile.f_name ? $("#input1").val(data_profile.f_name)  : $("#input1").val("")
