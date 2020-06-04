@@ -11,9 +11,12 @@ if ($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disab
 } else {
     $video_status = "";
 }
-$categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
+
+if (($_SESSION && $_SESSION["full_data"]["user_data"]["id"])) {
+    $categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
+}
 if (!empty($_SESSION) && $_SESSION["full_data"]["status"] == "admin_login") {
-    header('Location: '.$const["root_path"].'php/pages/admin.php');
+    header('Location: ' . $const["root_path"] . 'php/pages/admin.php');
 
 }
 if (!empty($_SESSION)) {
@@ -143,12 +146,15 @@ if (!empty($_SESSION)) {
                             <?php } ?>
                             <input type="hidden" name="video_path">
                             <div class="myfile__hide__row">
-                                <input <?php echo $video_status;?> type="file" id="myVideo" name="video" class="myfile__hide">
+                                <input <?php echo $video_status; ?> type="file" id="myVideo" name="video"
+                                                                    class="myfile__hide">
                                 <label for="myVideo" class="upload__logo">
                                     <img src="../../img/icons/icon-upload.svg" alt="" class="upload__logo__icon">
                                     Choose
                                 </label>
-                                <button <?php echo $video_status;?> class="upload__logo" id="video_upload">Upload Video</button>
+                                <button <?php echo $video_status; ?> class="upload__logo" id="video_upload">Upload
+                                    Video
+                                </button>
                             </div>
                             <p class="sign__up__desc"></p>
                         </div>
@@ -186,6 +192,6 @@ if (!empty($_SESSION)) {
     </body>
     </html>
 <?php } else {
-    header('Location: '.$const["root_path"]);
+    header('Location: ' . $const["root_path"]);
 } ?>
 

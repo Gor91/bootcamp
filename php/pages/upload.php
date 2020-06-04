@@ -8,7 +8,7 @@ $milliseconds = round(microtime(true) * 1000);
 $target_dir = "../../uploads/";
 $target_file = $target_dir . basename($_FILES["file"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-if ($_FILES["file"]["size"] > 100919165) {
+if ($_FILES["file"]["size"] > 104857600) {
     echo json_encode("large_file");
     $uploadOk = 0;
     return;
