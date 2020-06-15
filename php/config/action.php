@@ -10,8 +10,8 @@ class Db
     public function __construct()
     {
         $servername = "localhost";
-        $username = "phpmyadmin";
-        $password = "test1234";
+        $username = "root";
+        $password = "fd7544e3cc";
         $this->conn = new mysqli($servername, $username, $password);
         $query = "CREATE DATABASE IF NOT EXISTS eif_bootcamp";
         if ($this->conn->query($query)) {
@@ -224,14 +224,16 @@ class Db
             $company_name = $data["data"]["company_name"];
             $description = $data["data"]["description"];
             $password = $data["data"]["password"];
-            $confirm_password = $data["data"]["confirm_password"];
+            $confirm_password = filter_var($data["data"]["description"],FILTER_SANITIZE_STRING);
             //check if mail exist on db
             $checkQuery = "SELECT * FROM user WHERE email='$email'";
             $check = $this->conn->query($checkQuery);
             $check_email_exist = $check->fetch_assoc();
             if ($check_email_exist) {
                 //check password and confirm password equals
-                if ($password == $confirm_password) {
+//print_r($password);print_r($confirm_password);
+
+                //if ($password == $confirm_password) {
                     $query = "UPDATE user SET f_name ='$f_name', l_name = '$l_name', company_name = '$company_name',
                             description= '$description' , status=1, `password` = md5('" . $password . "') WHERE email= '$email'";
                     $res = $this->conn->query($query);
@@ -242,9 +244,9 @@ class Db
                         $_SESSION["full_data"] = $full_data;
                         echo json_encode($full_data);
                     }
-                } else {
-                    echo json_encode("password_not_equal");
-                }
+               // } else {
+               //     echo json_encode("password_not_equal");
+                //}
             } else {
                 echo json_encode("email_not_found");
             }
@@ -254,7 +256,7 @@ class Db
             $f_name = $data["data"]["f_name"];
             $l_name = $data["data"]["l_name"];
             $company_name = $data["data"]["company_name"];
-            $description = $data["data"]["description"];
+            $description = filter_var($data["data"]["description"],FILTER_SANITIZE_STRING);
             //check if mail exist on db
             $checkQuery = "SELECT * FROM user WHERE email='$email'";
             $check = $this->conn->query($checkQuery);

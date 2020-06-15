@@ -11,7 +11,12 @@ if ($v_c[0]["video_status"] == '"disabled"' || $v_c[0]["video_status"] == "disab
 } else {
     $video_status = "";
 }
-
+$old_video_status = "";
+if($_SESSION["full_data"]["user_data"]["status"] == "1" ){
+    $old_video_status = "disabled";
+}else{
+    $old_video_status = "";
+}
 if (($_SESSION && $_SESSION["full_data"]["user_data"]["id"])) {
     $categories = $db->getUser($_SESSION["full_data"]["user_data"]["id"]);
 }
@@ -146,13 +151,13 @@ if (!empty($_SESSION)) {
                             <?php } ?>
                             <input type="hidden" name="video_path">
                             <div class="myfile__hide__row">
-                                <input <?php echo $video_status; ?> type="file" id="myVideo" name="video"
+                                <input <?php echo $old_video_status; ?> type="file" id="myVideo" name="video"
                                                                     class="myfile__hide">
                                 <label for="myVideo" class="upload__logo">
                                     <img src="../../img/icons/icon-upload.svg" alt="" class="upload__logo__icon">
                                     Choose
                                 </label>
-                                <button <?php echo $video_status; ?> class="upload__logo" id="video_upload">Upload
+                                <button <?php echo $old_video_status; ?> class="upload__logo" id="video_upload">Upload
                                     Video
                                 </button>
                             </div>

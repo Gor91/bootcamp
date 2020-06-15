@@ -15,7 +15,13 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
     $apply = true;
     $link_name = "SIGN IN";
 }
+$status = "";
 
+if(!empty($_SESSION) && array_key_exists("full_data", $_SESSION) && $_SESSION["full_data"]["user_data"]["status"] == 0){
+    $status = 0;
+}else{
+    $status = 1;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -54,10 +60,10 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                                                      class="nav-item nav-link header__link">Learning</a></div>
                         <div class="header__list"><a href="#contact" class="nav-item nav-link header__link">Contacts</a>
                         </div>
-                        <div class="header__list"><a href="<?php echo $href ?>"
+                        <div class="header__list"><a data-status="<?php echo $status ?>" href="<?php echo $href ?>"
                                                      class="nav-item nav-link header__link sign_in_bk"
                                                      id="sign_in"><?php echo $link_name ?></a></div>
-                    </div>
+                   </div>
                 </div>
             </nav>
         </div>
@@ -97,7 +103,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             <li class="banner__nav__list"><a href="#learning" class="banner__nav__link">Learning</a>
                             </li>
                             <li class="banner__nav__list"><a href="#contact" class="banner__nav__link">Contacts</a></li>
-                            <li class="banner__nav__list"><a href="<?php echo $href ?>"
+                            <li class="banner__nav__list"><a data-status="<?php echo $status ?>" href="<?php echo $href ?>"
                                                              class="banner__nav__link sign_in_bk"><?php echo $link_name; ?></a>
                             </li>
                         </ul>
@@ -122,12 +128,11 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                     <div class="col-md-6 col-sm-12 p-sm-1">
                         <h2 class="about__title title">About</h2>
                         <p class="about__desc">
-                            Innovation Matching Grant bootcamp event is organized to give the startups an exclusive
-                            opportunity to learn from top speakers, gain valuable skills and prepare for pitching.
-                            Startups will also have one on one learning sessions with professional mentors who will
-                            share their knowledge about making attractive presentations for the upcoming Venture
-                            Forum. This event is a great chance to gain entrepreneurship knowledge for building a
-                            successful startup with the help of speakers, mentors and useful learning materials.
+                            IMG Bootcamp is here to help ambitious startups and founders to grow. The bootcamp provides a unique opportunity
+                            to learn from prominent local and international entrepreneurs and industry experts through online workshops and 1
+                            on 1 mentorship sessions. Throughout the program startups will work with mentors on their pitch & presentation and
+                            prepare for showcasing it during the Venture Forum. The bootcamp will also help to gain insights about the startup
+                            development, such as product development, growth and funding attraction.
                         </p>
                     </div>
                 </div>
@@ -226,7 +231,7 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
             <div class="item agenda__item">
                 <p class="agenda__day__big">Day 4 Session 5</p>
                 <p class="agenda__day__small">June 8, 2020</p>
-                <p class="agenda__day__small">19:00-20:00</p>
+                <p class="agenda__day__small">17:30-18:30</p>
                 <ul>
                     <li style="list-style-type: disc;">How to make your product win the competitors?</li>
                     <li style="list-style-type: disc;">Why do you need investment and how to raise your first million
@@ -237,10 +242,10 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                     </li>
                 </ul>
                 <p>Q&A session</p>
-<!--                <h5 class="agenda__speakers__title">Speakers</h5>-->
+                <h5 class="agenda__speakers__title">Speakers</h5>
                 <div class="agenda__speakers__row">
-                    <img src="" alt="" class="agenda__speakers__avatar">
-                    <p class="agenda__speakers__name"></p>
+                    <img src="img/users/1591362719565.png" alt="" class="agenda__speakers__avatar">
+                    <p class="agenda__speakers__name">Aram Salatian</p>
                 </div>
             </div>
             <div class="item agenda__item">
@@ -354,20 +359,27 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             <p class="speakers__company">Picsart</p>
                         </a>
                     </div>
+		    <div class="speakers col-md-3 col-sm-12">
+                        <a href="" target="_blank">
+                            <img src="img/users/1591362719565.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Aram Salatian</h4>
+                            <p class="speakers__position">Engineering Association</p>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="speakers__block">
                 <h3 class="speakers__title">Mentors <img src="img/icons/icon-mentors.png" alt=""
                                                          class="speakers__title__icon"></h3>
                 <div class="row align-items-start">
-                    <div class="speakers col-md-3 col-sm-12">
-                        <a href="https://www.linkedin.com/in/astipili/" target="_blank">
+<!--                    <div class="speakers col-md-3 col-sm-12">
+                       <a href="https://www.linkedin.com/in/astipili/" target="_blank">
                             <img src="img/users/12.png" alt="" class="speakers__img">
                             <h4 class="speakers__name">Astghik Piliposyan</h4>
                             <p class="speakers__position">Partnerships Manager at</p>
                             <p class="speakers__company">Krisp</p>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="speakers col-md-3 col-sm-12">
                         <a href="https://www.linkedin.com/in/tterian/" target="_blank">
                             <img src="img/users/14.png" alt="" class="speakers__img">
@@ -393,6 +405,23 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             <p class="speakers__company">U.S. Peace Corps Armenia</p>
                         </a>
                     </div>
+		    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/anna-konjoryan-aa58b827/" target="_blank">
+                            <img src="img/users/1591783273871.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Anna Konjoryan</h4>
+                            <p class="speakers__position">Human Resources Manager at</p>
+                            <p class="speakers__company">Synergy International Systems</p>
+                        </a>
+                    </div>
+		    <div class="speakers col-md-3 col-sm-12">
+                        <a href="https://www.linkedin.com/in/mihran-babayan/" target="_blank">
+                            <img src="img/users/1591875943373.png" alt="" class="speakers__img">
+                            <h4 class="speakers__name">Mihran Babayan</h4>
+                            <p class="speakers__position">Co-Founder & CBDO at</p>
+                            <p class="speakers__company">pAIboard</p>
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -420,16 +449,16 @@ if (!empty($_SESSION) && array_key_exists("full_data", $_SESSION)) {
                             <h5 class="participants__name user_profile" data-id="15">ERA Technologies LLC</h5>
                             <h5 class="participants__name user_profile" data-id="16">AVA</h5>
                             <h5 class="participants__name user_profile" data-id="17">Aion Clouds LLC</h5>
-                            <h5 class="participants__name user_profile" data-id="18">Revalkon</h5>
+                            <h5 class="participants__name user_profile" data-id="18">Revalcon</h5>
                             <h5 class="participants__name user_profile" data-id="19">Mimo LLC</h5>
-                            <h5 class="participants__name user_profile" data-id="20">Eventor</h5>
+                            <h5 class="participants__name user_profile" data-id="29">Velvioo LLC</h5>
                             <h5 class="participants__name user_profile" data-id="21">Genevo Incorporated LLC</h5>
                         </div>
                         <div class="col-md-4 col-sm-12">
                             <h5 class="participants__name  user_profile" data-id="22">Wirestock LLC</h5>
                             <h5 class="participants__name  user_profile" data-id="23">Kenguru</h5>
                             <h5 class="participants__name  user_profile" data-id="25">Rendchain</h5>
-                            <h5 class="participants__name  user_profile" data-id=26">gHost LLC</h5>
+                            <h5 class="participants__name  user_profile" data-id="26">gHost LLC</h5>
                             <h5 class="participants__name  user_profile" data-id="27">ARD Music</h5>
                             <h5 class="participants__name  user_profile" data-id="28">STEM Didactics LLC</h5>
                         </div>

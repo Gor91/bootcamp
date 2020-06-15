@@ -1,9 +1,11 @@
 var base_url = "http://bootcamp.eif.am/";
 
 $(".sign_in_bk").on("click", function () {
-    if ($(this).text() === "MY PROFILE") {
+if ($(this).text() === "MY PROFILE" && $(this).attr("data-status") === "1") {
         location.replace(base_url + "php/pages/profile.php");
-    } else {
+    } else if($(this).text() === "MY PROFILE" && $(this).attr("data-status") === "0") {
+        location.replace(base_url + "php/pages/sign__up.php");
+    }else{
         location.replace(base_url + "php/pages/sign__in.php");
     }
 })
@@ -52,6 +54,11 @@ $("#logo_upload").on("click", function (e) {
         data: form_data,
         type: 'post',
         success: function (php_script_response) {
+	     if (php_script_response && php_script_response.indexOf("status") < 0 && JSON.parse(php_script_response) === "file_type") {
+                $(".alert__margin").css("display", "block");
+                $("#alert_span").text("Please choose png or jpg or jpeg or png or gif file type.")
+                return;
+            }
             if (php_script_response && "status" in JSON.parse(php_script_response)) {
                 $("#logo_user").attr("src", JSON.parse(php_script_response).img_path).css({
                     width: "400",
@@ -70,7 +77,7 @@ $("#video_upload").on("click", function (e) {
         var form_data = new FormData();
         form_data.append('file', file_data);
         $.ajax({
-            url: 'upload.php', // point to server-side PHP script
+            url: 'upload_video.php', // point to server-side PHP script
             dataType: 'text',  // what to expect back from the PHP script, if anything
             cache: false,
             contentType: false,
@@ -83,11 +90,18 @@ $("#video_upload").on("click", function (e) {
                     $(".alert__margin").css("display", "block")
                     return;
                 }
+		if (php_script_response && JSON.parse(php_script_response) === "file_type") {
+                    $(".loader__all").css("display","none");
+                    $(".alert__margin").css("display", "block");
+                    $("#alert_span").text("Please choose mp4 file type.")
+                    return;
+                }
                 if (php_script_response && "status" in JSON.parse(php_script_response)) {
                     if (JSON.parse(php_script_response).type === "new_video_path") {
                         $(".loader__all").css("display","none");
                         setTimeout(function () {
-                            $("input[name=video_path]").val("uploaded")
+                            $("input[name=video_path]").val("uploaded");
+	   		    $("body").append("<input type=\"hidden\" name=\"video_path\" value=\"allow\">")
                             //video_div
                             $("#new_video_div").empty();
                             $("#new_video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
@@ -99,6 +113,7 @@ $("#video_upload").on("click", function (e) {
                         $(".loader__all").css("display","none");
                         setTimeout(function () {
                             $("input[name=video_path]").val("uploaded")
+			    $("body").append("<input type=\"hidden\" name=\"video_path\" value=\"allow\">")
                             //video_div
                             $("#video_div").empty();
                             $("#video_div").append("<video  width=\"400\"  height=\"200\" \"400\" id=\"video_player\" controls>\n" +
@@ -113,7 +128,7 @@ $("#video_upload").on("click", function (e) {
             },
             error:function (err) {
                 if(err.statusText === "Request Entity Too Large"){
-                    alert("ASD");
+                    //alert("ASD");
                     $(".loader__all").css("display","none");
                     $(".alert__margin").css("display", "block")
                 }
@@ -205,7 +220,7 @@ $("#sign_up_reg").on("click", function () {
             }
         }
 
-        if (this.name === "password" && $("input[name=password]").val().trim() != "") {
+        if (this.name === "password") {
             let res = pass_regex.test($("input[name=password]").val().trim());
             if (!res) {
                 errors = true;
@@ -216,7 +231,7 @@ $("#sign_up_reg").on("click", function () {
                 $(this).siblings("label").css("color", "black");
             }
         }
-        if (this.name === "confirm_password" && $("input[name=confirm_password]").val().trim() != "") {
+        if (this.name === "confirm_password") {
             let res = pass_regex.test($("input[name=confirm_password]").val().trim());
             if (!res) {
                 errors = true;

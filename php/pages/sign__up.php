@@ -18,7 +18,7 @@ session_start();
 <body>
 <div class="wrapper">
     <div class="sign__up__wrapper">
-        <a href="../../index.php" class="sign__home ">Home</a>
+        <a href="../../index.php" class="sign__home ">Home</a> 
         <div class="sign__up__left" style="background-image: url(../../img/bg/sign__up.png);">
             <h4 class="sign__up__left__title">Register</h4>
             <footer class="footer">
@@ -105,9 +105,15 @@ session_start();
 
                         </p>
                         <div class="upload__video__block" id="video_div">
-                            <img src="../../img/icons/icon-video.png" alt="">
-                        </div>
-                        <input type="hidden" name="video_path">
+				<?php if ($_SESSION["full_data"]["user_data"]["video_path"] != "") {?>
+                               		<input type="hidden" name="video_path" value="allow">
+                            		<video width="400" height="250" controls>
+		                                <source id="video_player_src"  src="<?php echo $const["root_path"] . $_SESSION["full_data"]["user_data"]["video_path"] ?>"  type="video/mp4">
+                		        </video>
+                            <?php }else{?>
+                                <input type="hidden" name="video_path" value="">
+                                <source src="../../img/icons/icon-video.png" alt="">
+                           <?php }?>                        </div>
                         <div class="myfile__hide__row">
                             <input type="file" id="myVideo" name="video"  class="myfile__hide">
                             <label for="myVideo" class="upload__logo">
